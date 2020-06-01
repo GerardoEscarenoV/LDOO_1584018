@@ -1,0 +1,508 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Inter', medium;
+    font-size: 10px;
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    max-width: 98rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* MENU */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.nav-brand {
+    width: 3rem;
+}
+
+.menu-icons {
+    font-size: 3.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.close i{
+    color: white;
+}
+
+.nav-list {
+    width: 25rem;
+    height: 100vh;
+    background-color: rgba(50,50,50,.5);
+    position: fixed;
+    top: 0;
+    right: -26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+    transition: all 650ms ease-in-out;
+}
+
+.nav-list.active {
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.nav-item {
+    margin: 1.5rem 0;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+/*E-Byte*/
+.ebyte {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(49,24, 131,.5) 0%, rgba(72, 56, 149,.8) 100%), url("images/background.jpg") center;
+    background-size: cover;
+    position: relative;
+}
+
+.ebyte::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 4.7rem;
+    background: url("images/wave-small.png") center no-repeat;
+    background-size: cover;
+}
+
+.main-message {
+    width: 100%;
+    max-width: 50rem;
+    color: #fafafa;
+    transform: translateY(20%);
+}
+
+.main-message h1{
+    font-size: 5rem;
+    margin: 1rem 0;
+}
+
+.main-message p {
+    font-size: 2rem;
+}
+
+.btn {
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+.btn:hover {
+    background-color: #ce587b;
+}
+
+/* Servicios */
+.servicios {
+    padding: 0;
+}
+
+.title-heading {
+    text-align: center;
+    margin-bottom: 10rem;
+    color: rbga(0,0,0,.7);
+}
+
+.title-heading h3 {
+    font-size: 1.4rem;
+}
+
+.title-heading h1 {
+    font-size: 2rem;
+    margin: .5rem 0 1rem;
+}
+
+/* CURSOS */
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.cursos-grid-item {
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.cursos-grid-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(49,24, 131,.5) 0%, rgba(72, 56, 149,.8) 100%);
+    z-index: -1;
+}
+
+.autocad {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.revitarch {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.revitstruct {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.revitmep {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.civil3d {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.photoshop {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.sketchup {
+    background: url("/images/background2.jpg") center no-repeat;
+}
+
+.cursos-grid-item img {
+    width: 4rem;
+}
+
+.cursos-grid-item h1 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+/* NOSOTROS */
+.miguel {
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.gerardo {
+    width: 100%;
+    color: #fafafa;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.miguel-text-box {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.gerardo-text-box {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.miguel-text-box i {
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #eb648c;
+    opacity: .5;
+    z-index: -1;
+}
+
+.gerardo-text-box i {
+    position: absolute;
+    top: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #eb648c;
+    opacity: .5;
+    z-index: -1;
+}
+
+.miguel-foto img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    border: 3px solid #eb648c;
+}
+
+.gerardo-foto img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    border: 3px solid #eb648c;
+}
+
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.nosotros-grid-item {
+    height: 40rem;
+    padding: 5rem;
+    color: #fafafa;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nosotros-grid-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, rgba(49,24, 131,.5) 0%, rgba(72, 56, 149,.8) 100%);
+    border-radius: 5rem;
+    z-index: -1;
+}
+
+/* CONTACTO */
+form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline-color: #fd57bf;
+}
+
+input[type="submit"] {
+    background-color: #eb648c;
+    border-radius: 2rem;
+    color: #fafafa;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    text-transform: uppercase;
+    transition: background-color 650ms;
+}
+
+input[type="submit"]:hover {
+    background-color: #ce587b;
+}
+
+/* PIE DE PAGINA */
+footer {
+    padding: 2.5rem 0;
+    background-color: #d7d4ed;
+    text-align: center;
+    color: rgba(0,0,0,.7);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*
+.up {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eeeeee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+}
+
+.up i {
+    color: #16162d;
+    font-size: 5rem;
+    margin: auto;
+}
+*/
+
+/* MEDIA */
+@media screen and (min-width: 350px) {
+    .main-message {
+        transform: translateY(40%);
+    }
+}
+
+@media screen and (min-width: 470px) {
+    .ebyte::before {
+        height: 9.4rem;
+        background: url("/images/wave-medium.png");
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        height: 8rem;
+
+    }
+    .nav-brand {
+        width: 4rem;
+    }
+    .nav-list {
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        position: initial;
+        top: initial;
+        right: initial;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-icons {
+        display: none;
+    }
+    .nav-item {
+        margin: 0 2.5rem;
+    }
+    .nav-link, .current {
+        color: #fafafa;
+        position: relative;
+        font-size: 1.3rem;
+    }
+    .nav-link::before, .current::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -.5rem;
+        background-color: #eb648c;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms;
+    }
+    .current::before {
+        transform: scaleX(1);
+    }
+    .nav-link:hover::before {
+        transform: scaleX(1)
+    }
+    .ebyte {
+        height: 60vh;
+    }
+    .main-message {
+        transform: translateY(70%);
+    }
+    .title-heading h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .ebyte::before {
+        height: 22.7rem;
+        background: url("/images/wave-large.png");
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .ebyte {
+        height: 75vh;
+    }
+}
+
+/*
+.section-heading {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+form label {
+    font-size: 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+*/
